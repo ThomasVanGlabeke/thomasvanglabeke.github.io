@@ -26,7 +26,7 @@ if (AudioContext) {
 	var frequencyData = new Uint8Array(analyser.frequencyBinCount)    
     var audio = new Audio()
     audio.controls = false
-    audio.src = "http://thomasvanglabeke.com/projets/enterthetechno/foamo_withoutyou.mp3"
+    audio.src = "assets/holy.mp3"
     document.body.appendChild(audio)
 // Once the song is playable, the loader disappears and the init function start
     audio.addEventListener('canplay', function () {
