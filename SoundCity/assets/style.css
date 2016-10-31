@@ -1,0 +1,206 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	cursor: none ;
+}
+
+body {
+    background-color: #DD709B;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 100;
+}
+
+#UIContainer {
+    display: block;
+    height: 450px;
+    width: 400px;
+    border: 1px solid white;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 25px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 50px;
+    animation: UIin 2s 1;
+    transition: all 1s ease;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+@keyframes UIin {
+    0% {
+        transform: translateX(50vw) translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    70% {
+        transform: translateX(-20px) translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        transform: translateX(0) translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+@keyframes UIout {
+    0% {
+        transform: translateX(0) translateY(-50%)
+    }
+    30% {
+        transform: translateX(-20px) translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        transform: translateX(50vw) translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+#UIContainer h1 {
+    font-weight: 100;
+}
+
+#UIContainer h3,
+p {
+    font-weight: 100;
+}
+
+.logo {
+    background-image: url('logo.png');
+    background-size: contain;
+    width: 80%;
+    height: 100px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+}
+
+p {
+    margin: 0;
+}
+
+.trait {
+    margin: 0 auto;
+    width: 60px;
+    display: block;
+    border-bottom: 1px solid white;
+}
+
+.rel {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.ab {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+}
+
+.credits {
+    text-align: center;
+    margin: 25px;
+}
+
+.link {
+    text-decoration: none;
+    font-weight: 300;
+    color: white;
+}
+
+.artist {
+    font-size: 12px;
+}
+
+#loader {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    z-index: 9999;
+}
+
+.loading {
+    position: absolute;
+    top: 60%;
+    display: block;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+}
+
+.loaderLogo {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('logo.png');
+    background-size: contain;
+    width: 400px;
+    height: 300px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    z-index: 9999999;
+}
+
+.rect {
+    transform-origin: bottom;
+    width: 20px;
+    display: inline-block;
+    animation: scaleTop 1s infinite;
+    opacity: 0.8;
+}
+
+.rect:nth-child(1) {
+    animation-delay: 200ms;
+    background-color: #F5007A;
+    height: 40px;
+}
+
+.rect:nth-child(2) {
+    animation-delay: 400ms;
+    background-color: #BA068C;
+    height: 25px;
+}
+
+.rect:nth-child(3) {
+    animation-delay: 600ms;
+    background-color: #7E0D9F;
+    height: 45px;
+}
+
+.rect:nth-child(4) {
+    animation-delay: 800ms;
+    background-color: #4313B1;
+    height: 35px;
+}
+
+.rect:nth-child(5) {
+    animation-delay: 1s;
+    background-color: #0719C3;
+    height: 40px;
+}
+
+@keyframes scaleTop {
+    0% {
+        transform: scaleY(1);
+    }
+    50% {
+        opacity: 0.3;
+        transform: scaleY(1.5);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
