@@ -192,6 +192,27 @@ p {
     height: 40px;
 }
 
+.abs {
+    position: absolute ;
+    top: -20px ;
+    font-size: 15px ;
+/*    display: block ;*/
+/*    widt: auto;*/
+/*    margin-left: auto ;*/
+/*    margin-right: auto ;*/
+/*    left: 0 ;*/
+    right: 0 ;
+    animation : 1s linear infinite flash  ;
+    animation-direction: alternate;
+    transition: all 1s ease ;
+    opacity: 0.5;
+}
+
+@keyframes flash {
+    from { opacity : 0}
+    to { opacity : 1 }
+}
+
 @keyframes scaleTop {
     0% {
         transform: scaleY(1);
