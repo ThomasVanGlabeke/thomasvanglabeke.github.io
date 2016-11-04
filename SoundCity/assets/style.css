@@ -25,7 +25,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     right: 50px;
-    animation: UIin 2s 1;
+    animation: ease-in-out 1s UIin 1;
     transition: all 1s ease;
     animation-fill-mode: forwards;
     visibility: hidden;
@@ -33,29 +33,34 @@ body {
 
 @keyframes UIin {
     0% {
-        transform: translateX(50vw) translateY(-50%);
+/*        transform: translateX(50vw) translateY(-50%);*/
+        opacity: 0;
         background-color: rgba(0, 0, 0, 0.2);
     }
-    70% {
-        transform: translateX(-20px) translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.4);
-    }
+/*    70% {*/
+/*        transform: translateX(-20px) translateY(-50%);*/
+/*        background-color: rgba(0, 0, 0, 0.4);*/
+/*        opacity: 0.8;*/
+/*    }*/
     100% {
-        transform: translateX(0) translateY(-50%);
+/*        transform: translateX(0) translateY(-50%);*/
         background-color: rgba(0, 0, 0, 0.6);
+        opacity: 1;
     }
 }
 
 @keyframes UIout {
     0% {
-        transform: translateX(0) translateY(-50%)
+        opacity: 1;
+/*        transform: translateX(0) translateY(-50%)*/
     }
-    30% {
-        transform: translateX(-20px) translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.4);
-    }
+/*    30% {*/
+/*        transform: translateX(-20px) translateY(-50%);*/
+/*        background-color: rgba(0, 0, 0, 0.4);*/
+/*    }*/
     100% {
-        transform: translateX(50vw) translateY(-50%);
+/*        transform: translateX(50vw) translateY(-50%);*/
+        opacity: 0;
         background-color: rgba(0, 0, 0, 0.2);
     }
 }
