@@ -202,10 +202,10 @@ p {
     top: -20px ;
     font-size: 15px ;
     right: 0 ;
-    animation : 1s linear infinite flash  ;
-    animation-direction: alternate;
+/*    animation : 1s linear infinite flash  ;*/
+/*    animation-direction: alternate;*/
     transition: all 1s ease ;
-    opacity: 0.5;
+    opacity: 1;
 }
 
 @keyframes flash {
